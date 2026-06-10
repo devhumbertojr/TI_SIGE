@@ -3,7 +3,7 @@ import AppShell from '../../components/AppShell';
 
 export default function NaoConformidadePage() {
   return (
-    <AppShell title="Não Conformidade" description="Registre a não conformidade encontrada durante a inspeção.">
+    <AppShell title="Não Conformidade" description="Registre a não conformidade encontrada durante a inspeção." backHref="/lista-nao-conformidade">
       <div className="rounded-[30px] bg-white/95 p-5 shadow-sm">
         <form className="space-y-4">
           <label className="flex flex-col text-sm text-slate-700">

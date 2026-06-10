@@ -3,7 +3,7 @@ import AppShell from '../../components/AppShell';
 
 export default function ChecklistPage() {
   return (
-    <AppShell title="Checklist de Qualidade" description="Preencha as informações para registrar a inspeção.">
+    <AppShell title="Checklist de Qualidade" description="Preencha as informações para registrar a inspeção." backHref="/lista-checklist">
       <div className="rounded-[30px] bg-white/95 p-5 shadow-sm">
         <form className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
