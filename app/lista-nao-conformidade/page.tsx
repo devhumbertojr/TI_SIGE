@@ -30,7 +30,7 @@ export default async function ListaNaoConformidadePage({ searchParams }: Props) 
       <div className="rounded-[30px] bg-white/95 p-5 shadow-sm">
         <div className="space-y-4">
           <Suspense>
-            <StatusFilter options={['Todos', 'Aberto', 'Em andamento', 'Concluído']} />
+            <StatusFilter options={['Todos', 'Aberto', 'Em andamento', 'Concluído', 'Cancelado']} />
           </Suspense>
 
           {items.length === 0 ? (
@@ -46,7 +46,7 @@ export default async function ListaNaoConformidadePage({ searchParams }: Props) 
           ) : (
             <div className="space-y-3">
               {items.map((item) => (
-                <div key={item.id} className="rounded-3xl border border-slate-200 bg-slate-50 p-4">
+                <Link key={item.id} href={`/nao-conformidade/${item.id}`} className="block rounded-3xl border border-slate-200 bg-slate-50 p-4 hover:border-orange-300 hover:bg-orange-50 transition-colors active:scale-[0.98]">
                   <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0 flex-1">
                       <p className="font-semibold text-slate-900 line-clamp-2">{item.descricao}</p>
@@ -60,7 +60,7 @@ export default async function ListaNaoConformidadePage({ searchParams }: Props) 
                     </div>
                     <StatusBadge label={item.status} />
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}

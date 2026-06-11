@@ -93,7 +93,9 @@ export default function ChecklistForm({ defaultInspetor, defaultSetor, defaultDa
           Status
           <select name="status" className={inputCls}>
             <option>Aberto</option>
+            <option>Em andamento</option>
             <option>Finalizado</option>
+            <option>Cancelado</option>
           </select>
         </label>
 
